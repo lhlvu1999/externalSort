@@ -1,4 +1,10 @@
-#include <bits\stdc++.h>
+#include <stdio.h>
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <queue>
 #define ll long long
 #define F first
 #define S second
@@ -138,19 +144,19 @@ int main(){
     string inputFile, outputFile;
     // run_size is RAM size
     ll runSize, fileSize;
-
+/*
     cout<<"Input File Name: ";
     cin>>inputFile;
     cout<<"Output File Name: ";
     cin>>outputFile;
     cout<<"Size of RAM: ";
-    cin>>run_size;
-
-    /*
+    cin>>runSize;
+*/
+    
     inputFile = "input.txt";
     outputFile = "output.txt";
-    runSize = 1000000;
-    */
+    runSize = 400;
+    
     externalSort(inputFile, outputFile, runSize);
 
     return 0;
