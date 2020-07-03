@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <fstream>
-#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <iterator>
@@ -83,7 +81,6 @@ void createInitialRun(char* inputFile, string tfile, ll runSize, int &numChunks,
         // push this line has get from previous stage to arr
         if (lineNextFile.size()>1){
             arr.push_back(lineNextFile);
-            cout<<sizeLeft<<" "<<lineNextFile;
             sizeTempF += lineNextFile.size();
             lineNextFile="";
         }
@@ -156,11 +153,11 @@ void externalSort(char* inputFile, char* outputFile, ll runSize){
     // Prefix name of temporary files
     string tfile = "temp-file-";
 
-    cout<<"Size of file: "<<fileSize<<endl;
+    //cout<<"Size of file: "<<fileSize<<endl;
 
     createInitialRun(inputFile, tfile, runSize, numChunks, fileSize);
 
-    cout<<"Number of Chunks: "<<numChunks<<endl;
+    //cout<<"Number of Chunks: "<<numChunks<<endl;
 
     mergeFiles(outputFile, tfile, numChunks, runSize);
 
