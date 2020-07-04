@@ -151,11 +151,11 @@ int main(){
     cout<<"Size of RAM: ";
     cin>>run_size;
     */
-    /*
+
     inputFile = "input.txt";
     outputFile = "output.txt";
-    runSize = 1000000;
-    */
+    runSize = 2010;
+
     externalSort(inputFile, outputFile, runSize);
 
     return 0;
