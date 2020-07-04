@@ -26,11 +26,12 @@ void mergeFiles(char* outputFile, string tfile, int numChunks, ll runSize){
     // Create priority_queue used STL to stored the smallest string in each chunks
     priority_queue<ppi, vector<ppi>, greater<ppi> > pq;
     for (int i = 0; i < numChunks; i++){
-        char getLine[runSize];
+        char *getLine = (char*) malloc( sizeof(char) * runSize);
         fgets(getLine, runSize, sortedFiles[i]);
         string s = getLine;
         if (s.size() > 1)
             pq.push({s,i});
+        free (getLine);
     }
     // open output file
     FILE* fp;
